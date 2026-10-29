@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131110" media="(prefers-color-scheme: dark)">
+  <title>CP Roadmap: learn competitive programming in C++</title>
+  <meta name="description" content="A step-by-step C++ competitive programming roadmap for absolute beginners: what to learn, what to solve, recall checks for every topic and spaced reviews.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CP Roadmap: learn competitive programming in C++">
+  <meta property="og:description" content="A single page plan for absolute beginners: 18 topics, 84 ordered problems, recall checks and spaced reviews, from setup to trees.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c2410c'/%3E%3Cpath d='M10 21l6-10 6 10' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/roadmap-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#roadmap">Skip to the roadmap</a>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">C++ · Competitive programming</p>
+        <h1>Learn competitive programming <span class="mark">in C++</span>, from zero.</h1>
+        <p class="lede">A single page plan for absolute beginners: what to learn, where to learn it, which problems to solve and in what order, and how to prove you are ready to move on.</p>
+        <p class="note">Estimates assume 2 hours a day, practice included. Being slower is normal; consistency matters more than speed.</p>
+        <div class="cta">
+          <a class="btn" href="#today">See what to do today</a>
+          <a class="btn btn-ghost" href="#phase-1">Start at Phase 1</a>
+        </div>
+      </div>
+
+      <aside class="hero-board" aria-label="Your progress">
+        <div class="board-top">
+          <div class="ring" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-track" cx="60" cy="60" r="52" pathLength="100"></circle>
+              <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="52" pathLength="100"></circle>
+            </svg>
+            <span class="ring-value" id="ring-percent">0%</span>
+          </div>
+          <div class="board-copy">
+            <p class="label">Your progress</p>
+            <p class="board-title">Tick a topic when its test passes. It comes back for review later.</p>
+          </div>
+        </div>
+        <dl class="board-stats">
+          <div><dt>Days</dt><dd id="stat-days">0</dd></div>
+          <div><dt>Weeks</dt><dd id="stat-weeks">0</dd></div>
+          <div><dt>Topics</dt><dd id="stat-topics">0 / 0</dd></div>
+          <div><dt>Problems</dt><dd id="stat-problems">0 / 0</dd></div>
+        </dl>
+        <p class="board-note">Progress is saved in this browser only. Reviews are scheduled 3, 7 and 21 days after each topic.</p>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="subnav" aria-label="Roadmap sections">
+    <div class="wrap subnav-inner">
+      <span class="subnav-brand">CP Roadmap</span>
+      <div class="subnav-links" id="subnav-links"></div>
+      <span class="subnav-count" id="subnav-count">0 / 0 topics</span>
+    </div>
+    <div class="subnav-meter" aria-hidden="true"><span id="subnav-fill"></span></div>
+  </nav>
+
+  <main>
+    <noscript>
+      <p class="wrap notice">This page builds the roadmap with JavaScript. Turn JavaScript on to see the plan.</p>
+    </noscript>
+
+    <section class="wrap today" id="today" aria-labelledby="today-title">
+      <p class="section-kicker">Start here</p>
+      <h2 id="today-title">Today</h2>
+      <div class="today-grid">
+        <article class="card card-next" id="next-card"></article>
+        <article class="card" id="review-card"></article>
+      </div>
+    </section>
+
+    <section class="wrap guide" aria-labelledby="guide-title">
+      <p class="section-kicker">The method</p>
+      <h2 id="guide-title">How to study</h2>
+      <ol id="guide-list"></ol>
+    </section>
+
+    <div id="roadmap"></div>
+
+    <section class="wrap after" id="after" aria-labelledby="after-title"></section>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-info">
+      <p class="footer-brand">CP Roadmap</p>
+      <p>Links open external sites in a new tab. Progress is saved in this browser only.</p>
+    </div>
+    <button type="button" class="linkbtn" id="reset">Reset progress</button>
+  </footer>
+</body>
+</html>
